@@ -1,6 +1,6 @@
 # Portfólio Profissional - Israel
 
-Um site de portfólio profissional moderno e responsivo, desenvolvido para apresentar as habilidades, projetos e experiência profissional de Israel.
+Um site de portfólio profissional moderno e responsivo, desenvolvido para apresentar as habilidades, projetos e experiência profissional.
 
 ## Visão Geral
 
@@ -21,6 +21,8 @@ Este projeto é um site de portfólio de página única (SPA) desenvolvido com A
 - **Animações**: Three.js
 - **Formulário de Contato**: EmailJS
 - **Implantação**: Cloudflare Pages
+- **Back-end**: Firabase ( Para o cliente fazer alterações no projeto sem que ele precise saber programar)
+  
 
 ## Características
 
@@ -32,32 +34,6 @@ Este projeto é um site de portfólio de página única (SPA) desenvolvido com A
 - Interface amigável para dispositivos móveis
 - Carregamento rápido e eficiente
 
-## Pré-requisitos
-
-- Node.js 18.19.1 ou superior
-- Yarn 3.6.3 ou superior
-
-## Instalação
-
-1. Clone o repositório
-```bash
-git clone https://github.com/Igorms27/portfolio-israel.git
-cd portfolio-israel
-```
-
-2. Instale as dependências
-```bash
-yarn install
-```
-
-3. Inicie o servidor de desenvolvimento
-```bash
-yarn start
-```
-
-4. Acesse `http://localhost:4200/` no navegador
-
-## Implantação
 
 O projeto está configurado para implantação no Cloudflare Pages, com scripts de build dedicados para este ambiente.
 
