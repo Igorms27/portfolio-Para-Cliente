@@ -36,7 +36,7 @@ Este projeto é um site de portfólio de página única (SPA) desenvolvido com A
 
 
 O projeto está configurado para implantação no Cloudflare Pages, com scripts de build dedicados para este ambiente.
-
+Link para visualização do projeto:https://israeloliveira.pages.dev/
 ## Licença
 
 Este projeto foi desenvolvido como freelancer e todos os direitos estão reservados ao cliente.
