@@ -1,0 +1,8 @@
+{
+  "name": "portifolio-functions",
+  "version": "1.0.0",
+  "description": "Cloudflare Pages Functions para o portfólio",
+  "main": "_middleware.js",
+  "type": "module",
+  "dependencies": {}
+} 

@@ -1,0 +1,12 @@
+name = "portifolio-worker"
+main = "dist/cloudflare/worker.js"
+compatibility_date = "2023-10-16"
+
+[site]
+bucket = "dist/cloudflare"
+
+[env.production]
+route = "portifolio-9ny.pages.dev/*"
+
+[build]
+command = "./build-cloudflare.sh" 
