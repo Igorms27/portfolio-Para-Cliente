@@ -1,4 +1,4 @@
-# Portfólio Profissional - Israel
+# Portfólio Profissional 
 
 Um site de portfólio profissional moderno e responsivo, desenvolvido para apresentar as habilidades, projetos e experiência profissional.
 
