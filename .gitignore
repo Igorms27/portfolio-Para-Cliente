@@ -51,6 +51,9 @@ Thumbs.db
 .env.local
 .env.development
 
+# Arquivo de environment específico que pode conter chaves sensíveis
+src/environments/environment.ts
+
 # Build files
 .cloudflare.env
 
