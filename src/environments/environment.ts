@@ -1,26 +1,19 @@
-// Este arquivo será substituído pelo arquivo environment.prod.ts na build de produção.
-// O arquivo environment.dev.ts será usado para desenvolvimento.
-
-// Declaração necessária para TypeScript reconhecer process.env
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare const process: { env: Record<string, string | undefined> };
-
 export const environment = {
   production: false,
   firebase: {
-    apiKey: process.env['FIREBASE_API_KEY'] || '',
-    authDomain: process.env['FIREBASE_AUTH_DOMAIN'] || '',
-    projectId: process.env['FIREBASE_PROJECT_ID'] || '',
-    storageBucket: process.env['FIREBASE_STORAGE_BUCKET'] || '',
-    messagingSenderId: process.env['FIREBASE_MESSAGING_SENDER_ID'] || '',
-    appId: process.env['FIREBASE_APP_ID'] || ''
+    apiKey: 'PLACEHOLDER_COLOQUE_SUA_API_KEY_REAL_APENAS_LOCALMENTE',
+    authDomain: 'israel-portfolio-data.firebaseapp.com',
+    projectId: 'israel-portfolio-data',
+    storageBucket: 'israel-portfolio-data.appspot.com',
+    messagingSenderId: '1004583028487',
+    appId: '1:1004583028487:web:b4a90ad2f9f8e8e98d5d40'
   },
   emailjs: {
-    serviceId: process.env['EMAILJS_SERVICE_ID'] || '',
-    templateId: process.env['EMAILJS_TEMPLATE_ID'] || '',
-    userId: process.env['EMAILJS_USER_ID'] || ''
+    serviceId: 'PLACEHOLDER_EMAILJS_SERVICE_ID',
+    templateId: 'PLACEHOLDER_EMAILJS_TEMPLATE_ID',
+    userId: 'PLACEHOLDER_EMAILJS_USER_ID'
   },
   recaptcha: {
-    siteKey: process.env['RECAPTCHA_SITE_KEY'] || ''
+    siteKey: 'PLACEHOLDER_RECAPTCHA_SITE_KEY'
   }
 }; 
