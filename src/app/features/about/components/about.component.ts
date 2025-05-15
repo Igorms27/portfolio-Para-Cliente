@@ -3,6 +3,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 import { LanguageService } from '../../../core/services/language.service';
 import { AboutService } from '../services/about.service';
+import { ResumeStorageService } from '../services/resume-storage.service';
 import { About } from '../../../models/about.model';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -46,6 +47,12 @@ export class AboutComponent implements AfterViewInit, OnInit, OnDestroy {
   aboutData: About | null = null;
   loading = true;
   error = false;
+  
+  // URL do currículo e estados
+  resumeUrl: string | null = null;
+  loadingResume = true;
+  resumeError = false;
+  resumeErrorMessage = '';
 
   // Para limpeza de observables
   private destroy$ = new Subject<void>();
@@ -53,7 +60,8 @@ export class AboutComponent implements AfterViewInit, OnInit, OnDestroy {
   constructor(
     @Inject(PLATFORM_ID) private platformId: object, 
     private languageService: LanguageService,
-    private aboutService: AboutService
+    private aboutService: AboutService,
+    private resumeService: ResumeStorageService
   ) {}
 
   ngOnInit() {
@@ -67,6 +75,9 @@ export class AboutComponent implements AfterViewInit, OnInit, OnDestroy {
 
     // Carregar dados do perfil do Firebase
     this.loadAboutData();
+    
+    // Carregar URL do currículo do Firebase Storage
+    this.loadResumeUrl();
   }
 
   ngOnDestroy() {
@@ -167,17 +178,48 @@ export class AboutComponent implements AfterViewInit, OnInit, OnDestroy {
     }
   }
 
+  // Método para carregar a URL do currículo
+  loadResumeUrl(): void {
+    this.loadingResume = true;
+    this.resumeError = false;
+    this.resumeUrl = null;
+    
+    this.resumeService.getResumeUrl()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: (url) => {
+          this.resumeUrl = url;
+          this.loadingResume = false;
+        },
+        error: (error) => {
+          console.error('Erro ao carregar URL do currículo:', error);
+          this.resumeError = true;
+          this.resumeErrorMessage = error.message || 'Erro ao carregar o currículo';
+          this.loadingResume = false;
+        }
+      });
+  }
+
   // Método para baixar o currículo
   downloadResume(): void {
     if (!isPlatformBrowser(this.platformId)) return;
     
-    // Usar o currículo com o caminho correto
-    const resumeUrl = 'assets/docs/curriculo_israel_oliveira.pdf';
+    // Se ainda estiver carregando ou se houver erro, não fazer nada
+    if (this.loadingResume || this.resumeError || !this.resumeUrl) {
+      if (this.resumeError) {
+        alert(this.resumeErrorMessage || 'Não foi possível baixar o currículo. Por favor, tente novamente mais tarde.');
+      }
+      return;
+    }
+    
+    // Usar a URL do Firebase
+    const resumeUrl = this.resumeUrl;
     
     // Criar um link invisível e clicar nele
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'curriculo_israel_oliveira.pdf';
+    link.target = '_blank';  // Abrir em nova aba para maior compatibilidade
     document.body.appendChild(link);
     link.click();
     
