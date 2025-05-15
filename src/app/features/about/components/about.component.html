@@ -42,7 +42,18 @@
             <span>{{ personalInfo.location }}</span>
           </div>
           <div class="download-cv" #downloadCv>
-            <a href="javascript:void(0)" class="btn btn-primary" (click)="downloadResume()">{{ 'about.downloadCV' | translate }}</a>
+            <!-- Botão de download com diferentes estados -->
+            <a href="javascript:void(0)" 
+               class="btn btn-primary" 
+               [class.disabled]="loadingResume || resumeError || !resumeUrl" 
+               (click)="downloadResume()"
+               [attr.title]="resumeError ? resumeErrorMessage : (loadingResume ? 'Carregando currículo...' : 'Baixar currículo')">
+              <!-- Ícone de loading quando estiver carregando -->
+              <span *ngIf="loadingResume" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+              <!-- Ícone de erro quando houver erro -->
+              <span *ngIf="resumeError" class="text-danger me-2">⚠</span>
+              {{ 'about.downloadCV' | translate }}
+            </a>
           </div>
         </div>
       </div>
