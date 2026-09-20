@@ -72,11 +72,11 @@
             
             <!-- reCAPTCHA -->
             <div class="form-group mb-3 d-flex justify-content-center">
-              <re-captcha
+              <ngx-recaptcha2
                 formControlName="recaptcha"
                 [siteKey]="RECAPTCHA_SITE_KEY"
                 [ngClass]="{'is-invalid': contactForm.get('recaptcha')?.invalid && contactForm.get('recaptcha')?.touched}">
-              </re-captcha>
+              </ngx-recaptcha2>
               <div class="invalid-feedback d-block text-center" *ngIf="contactForm.get('recaptcha')?.invalid && contactForm.get('recaptcha')?.touched">
                 {{ 'contact.captchaRequired' | translate }}
               </div>

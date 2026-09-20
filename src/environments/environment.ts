@@ -14,6 +14,7 @@ export const environment = {
     userId: 'PLACEHOLDER_EMAILJS_USER_ID'
   },
   recaptcha: {
-    siteKey: 'PLACEHOLDER_RECAPTCHA_SITE_KEY'
+    // Public reCAPTCHA v2 test key provided by Google for local development.
+    siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
   }
-}; 
+};

@@ -1,13 +1,12 @@
 [build]
-command = "npm install --no-corepack --legacy-peer-deps --no-fund --no-audit && npm run build --no-corepack"
+command = "./build-cloudflare.sh"
 destination = "dist/cloudflare"
 node_compatibility_date = "2023-11-21"
-node_version = "16.20.0"
+node_version = "20.19.0"
 
 [build.environment]
-NODE_VERSION = "16.20.0"
-SKIP_COREPACK = "true"
-NPM_FLAGS = "--no-corepack --legacy-peer-deps --no-fund --no-audit"
+NODE_VERSION = "20.19.0"
+COREPACK_ENABLE_DOWNLOAD_PROMPT = "0"
 
 [site]
-output = "dist/cloudflare" 
+output = "dist/cloudflare"

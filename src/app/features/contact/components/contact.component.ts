@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { NgxCaptchaModule } from 'ngx-captcha';
 import { EmailService } from '../../../core/email/email.service';
 import { environment } from '../../../../environments/environment';
 
@@ -13,8 +13,7 @@ import { environment } from '../../../../environments/environment';
     CommonModule, 
     TranslatePipe, 
     ReactiveFormsModule,
-    RecaptchaModule,
-    RecaptchaFormsModule
+    NgxCaptchaModule
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'

@@ -9,9 +9,6 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage'; // Adicionado Storage como exemplo, remova se não usar
 
-// ng-recaptcha (para v2/invisible)
-import { RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings, RECAPTCHA_SETTINGS } from 'ng-recaptcha';
-
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ProjectModule } from './features/project/project.module';
@@ -64,11 +61,5 @@ export const appConfig: ApplicationConfig = {
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()), // Remova ou ajuste conforme o uso
 
-    // Configuração do ng-recaptcha
-    importProvidersFrom(RecaptchaFormsModule, RecaptchaModule),
-    {
-      provide: RECAPTCHA_SETTINGS,
-      useValue: { siteKey: environment.recaptcha.siteKey } as RecaptchaSettings,
-    },
   ]
 };

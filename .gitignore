@@ -53,6 +53,7 @@ Thumbs.db
 
 # Arquivo de environment específico que pode conter chaves sensíveis
 src/environments/environment.ts
+src/environments/environment.generated.ts
 
 # Build files
 .cloudflare.env
@@ -95,4 +96,4 @@ yarn-error.log
 testem.log
 /typings
 .DS_Store
-Thumbs.db 
+Thumbs.db
