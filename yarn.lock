@@ -5724,18 +5724,18 @@ __metadata:
   linkType: hard
 
 "bootstrap-icons@npm:^1.11.3":
-  version: 1.13.0
-  resolution: "bootstrap-icons@npm:1.13.0"
-  checksum: 10/1b6e28b640d794dfc0af6f10604bc2937f2ee2577667430a1ae105200a5a038b45c2df0be2eb3642494c362781bb331409bb882f0b9a9d1681b263642598de10
+  version: 1.13.1
+  resolution: "bootstrap-icons@npm:1.13.1"
+  checksum: 10/d6a3bb69268c5132acd4b4a3ca40c46c4548f7c8cbb33154d2d5fa4668c42e0b60a2e55abcd08aca9b1e6871ce5b18ce5f7789031486e8807cc552cc52f88dee
   languageName: node
   linkType: hard
 
 "bootstrap@npm:^5.3.5":
-  version: 5.3.6
-  resolution: "bootstrap@npm:5.3.6"
+  version: 5.3.8
+  resolution: "bootstrap@npm:5.3.8"
   peerDependencies:
     "@popperjs/core": ^2.11.8
-  checksum: 10/843773c43c2aa51da6e6e5d8d117b29a9f834a7f64471c907ff9dc77c918802d107d139602f86b5899b58d39b352fb91e5317f3f184ce4d60b3264fd30bc62d7
+  checksum: 10/ca36e1816940ee424b91f3a534e7a359c1f180da00e92c650b92a9c2621a1ca24ee71a0886666675718b58527f9193cd0ead934da7a92108224013fa07bec2d2
   languageName: node
   linkType: hard
 
@@ -10016,7 +10016,7 @@ __metadata:
     tslib: "npm:^2.3.0"
     typescript: "npm:~5.8.3"
     typescript-eslint: "npm:~8.70.0"
-    zone.js: "npm:~0.15.0"
+    zone.js: "npm:~0.16.3"
   languageName: unknown
   linkType: soft
 
@@ -12444,9 +12444,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zone.js@npm:~0.15.0":
-  version: 0.15.0
-  resolution: "zone.js@npm:0.15.0"
-  checksum: 10/99b9381edcf1ca3da147375a9776f8ad5e6570b9e2cbd33095284a67904d94b5083448440ffcb8ec1e418a505020de0e37837db04d6a0303e111b054a8b752a2
+"zone.js@npm:~0.16.3":
+  version: 0.16.3
+  resolution: "zone.js@npm:0.16.3"
+  checksum: 10/0355ba6140cdd55c387398d0fdc094aaad36d17090fd6f27afa5cba66a38e300cc20e326430b7fde2a93a53bc2226476cc86acbd6813164feb5e47809c88655d
   languageName: node
   linkType: hard
