@@ -8349,10 +8349,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-core@npm:~5.6.0":
-  version: 5.6.0
-  resolution: "jasmine-core@npm:5.6.0"
-  checksum: 10/0171a28634c6d9667278a628483bc9c6a075512078e74d208ae9172525e108d386621915449b30abe008d1bd86568a7f057cfc170be2286da5e21c4d5f2eba8e
+"jasmine-core@npm:~7.0.2":
+  version: 7.0.2
+  resolution: "jasmine-core@npm:7.0.2"
+  checksum: 10/5dd6ea610884ba297c07c6d7f92fadcc923d7f53c037e5d45aad04ec5e8489d88748789d5ddfb610022d9d8aa94647308946bd0e1de2e287fb944185b5bff96a
   languageName: node
   linkType: hard
 
@@ -10005,7 +10005,7 @@ __metadata:
     eslint: "npm:~9.39.5"
     express: "npm:~4.22.3"
     firebase: "npm:~11.10.0"
-    jasmine-core: "npm:~5.6.0"
+    jasmine-core: "npm:~7.0.2"
     karma: "npm:~6.4.0"
     karma-chrome-launcher: "npm:~3.2.0"
     karma-coverage: "npm:~2.2.0"
